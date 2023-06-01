@@ -51,7 +51,14 @@ describe('line wrapping', () => {
   })
 
   it('errors on bad overflow', () => {
-    const lw = new LineWrap({width: 4, overflow: Symbol('bad')})
-    assert.throws(() => lw.wrap('abcde'))
+    assert.throws(() => {
+      // eslint-disable-next-line no-new
+      new LineWrap({width: 4, overflow: Symbol('bad')})
+    })
+
+    assert.throws(() => {
+      // eslint-disable-next-line no-new
+      new LineWrap({width: 4, indent: 4})
+    })
   })
 })
