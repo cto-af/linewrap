@@ -1,0 +1,43 @@
+{
+  "name": "@cto.af/linewrap",
+  "version": "0.0.0",
+  "description": "Wrap lines using the Unicode Line Breaking algorithm from UAX #14",
+  "main": "lib/index.js",
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf docs types",
+    "test": "c8 mocha",
+    "lint": "eslint . --ext js,cjs",
+    "docs": "typedoc",
+    "types": "tsc",
+    "prebuild": "npm run clean",
+    "build": "npm run types && npm run lint && npm run docs && npm run test && npm pack --dry-run"
+  },
+  "keywords": [
+    "uax14",
+    "word-wrap",
+    "wordwrap",
+    "linebreak",
+    "unicode",
+    "grapheme",
+    "cluster"
+  ],
+  "author": "Joe Hildebrand <joe-github@cursive.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "@cto.af/eslint-config": "1.1.2",
+    "@types/node": "20.2.5",
+    "c8": "7.14.0",
+    "eslint": "8.41.0",
+    "mocha": "10.2.0",
+    "rimraf": "5.0.1",
+    "typedoc": "0.24.7",
+    "typescript": "5.0.4"
+  },
+  "dependencies": {
+    "@cto.af/linebreak": "1.1.0"
+  },
+  "engines": {
+    "node": ">= 16"
+  }
+}
