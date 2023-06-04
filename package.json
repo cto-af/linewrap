@@ -24,6 +24,7 @@
     "cluster"
   ],
   "author": "Joe Hildebrand <joe-github@cursive.net>",
+  "repository": "cto-af/linewrap",
   "license": "MIT",
   "devDependencies": {
     "@cto.af/eslint-config": "1.1.2",
