@@ -4,6 +4,7 @@
   "description": "Wrap lines using the Unicode Line Breaking algorithm from UAX #14",
   "main": "lib/index.js",
   "type": "module",
+  "types": "types/index.d.ts",
   "scripts": {
     "clean": "rimraf docs types",
     "test": "c8 mocha",
