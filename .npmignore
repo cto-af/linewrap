@@ -12,3 +12,4 @@ tsconfig.json
 docs/
 typedoc.config.cjs
 t.js
+assets
