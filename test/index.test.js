@@ -35,9 +35,13 @@ describe('line wrapping', () => {
     const lw = new LineWrap({width: 4, indent: 2})
     assert.equal(lw.wrap('ab bc'), '  ab\n  bc')
 
-    // Come back to this once there are enough tests to refactor
-    // const lw2 = new LineWrap({width: 4, indent: 2, indentFirst: false})
-    // assert.equal(lw2.wrap('abcd bc'), 'ab\n  bc')
+    const lw2 = new LineWrap({
+      width: 4,
+      indent: 2,
+      indentFirst: false,
+      firstCol: 0,
+    })
+    assert.equal(lw2.wrap('abcd bc'), 'abcd\n  bc')
   })
 
   it('clips overflows', () => {
