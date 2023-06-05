@@ -19,6 +19,8 @@ for (const line of w.lines('Lorem ipsum dolor sit amet...')) {
 }
 ```
 
+Full [API docs](https://cto-af.github.io/linewrap/) are available.
+
 ### Methods
 
 <dl>
@@ -126,7 +128,7 @@ escapes will be replaced appropriately.  Defaults to an identity transform.</dd>
 
 ## Visual representation of options
 
-![Visual depiction of linewrap options](assets/visual.png)
+![Visual depiction of linewrap options](https://raw.githubusercontent.com/cto-af/linewrap/main/assets/visual.png)
 
 ---
 [![Tests](https://github.com/cto-af/linewrap/actions/workflows/node.js.yml/badge.svg)](https://github.com/cto-af/linewrap/actions/workflows/node.js.yml)

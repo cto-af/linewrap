@@ -17,6 +17,7 @@
 </code><button>Copy</button></pre>
 <a id="md:api" class="tsd-anchor"></a><h2><a href="#md:api">API</a></h2><pre><code class="language-js"><span class="hl-3">import</span><span class="hl-1"> {</span><span class="hl-4">LineWrap</span><span class="hl-1">} </span><span class="hl-3">from</span><span class="hl-1"> </span><span class="hl-2">&#39;@cto.af/linewrap&#39;</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">w</span><span class="hl-1"> = </span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-0">LineWrap</span><span class="hl-1">()</span><br/><span class="hl-4">w</span><span class="hl-1">.</span><span class="hl-0">wrap</span><span class="hl-1">(</span><span class="hl-2">&#39;Lorem ipsum dolor sit amet...&#39;</span><span class="hl-1">)  </span><span class="hl-7">// A string, wrapped to your console length</span><br/><span class="hl-3">for</span><span class="hl-1"> (</span><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">line</span><span class="hl-1"> </span><span class="hl-5">of</span><span class="hl-1"> </span><span class="hl-4">w</span><span class="hl-1">.</span><span class="hl-0">lines</span><span class="hl-1">(</span><span class="hl-2">&#39;Lorem ipsum dolor sit amet...&#39;</span><span class="hl-1">)) {</span><br/><span class="hl-1">  </span><span class="hl-7">// `line` does not have a newline at the end</span><br/><span class="hl-1">}</span>
 </code><button>Copy</button></pre>
+<p>Full <a href="https://cto-af.github.io/linewrap/">API docs</a> are available.</p>
 <a id="md:methods" class="tsd-anchor"></a><h3><a href="#md:methods">Methods</a></h3><dl>
 <dt>wrap(string)</dt>
 <dd>Sometimes, you just want text out of the wrapping operation, with newlines
@@ -114,7 +115,7 @@ escapes will be replaced appropriately.  Defaults to an identity transform.</dd>
 
 </dl>
 
-<a id="md:visual-representation-of-options" class="tsd-anchor"></a><h2><a href="#md:visual-representation-of-options">Visual representation of options</a></h2><p><img src="assets/visual.png" alt="Visual depiction of linewrap options"></p>
+<a id="md:visual-representation-of-options" class="tsd-anchor"></a><h2><a href="#md:visual-representation-of-options">Visual representation of options</a></h2><p><img src="https://raw.githubusercontent.com/cto-af/linewrap/main/assets/visual.png" alt="Visual depiction of linewrap options"></p>
 <hr>
 <p><a href="https://github.com/cto-af/linewrap/actions/workflows/node.js.yml"><img src="https://github.com/cto-af/linewrap/actions/workflows/node.js.yml/badge.svg" alt="Tests"></a>
 <a href="https://codecov.io/gh/cto-af/linewrap"><img src="https://codecov.io/gh/cto-af/linewrap/branch/main/graph/badge.svg?token=rS0f3lhan5" alt="codecov"></a></p>
