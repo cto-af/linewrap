@@ -28,5 +28,6 @@ describe('special space breaking', () => {
     assertBreaks('a ', [[1, false], [2, true]])
     assertBreaks('a\u200Bb', [[2, false], [3, false]])
     assertBreaks('\u2014  \u2014', [[4, false]])
+    assertBreaks('utf8 base64" Default:', [[4, false], [5, true], [13, false], [21, false]])
   })
 })
