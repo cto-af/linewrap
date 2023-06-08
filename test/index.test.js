@@ -32,24 +32,56 @@ describe('line wrapping', () => {
   })
 
   it('indents', () => {
-    const lw = new LineWrap({width: 4, indent: 2})
+    let lw = new LineWrap({width: 4, indent: 2})
     assert.equal(lw.wrap('ab bc'), '  ab\n  bc')
 
-    const lw2 = new LineWrap({
+    lw = new LineWrap({
       width: 4,
       indent: 2,
       indentFirst: false,
       firstCol: 0,
     })
-    assert.equal(lw2.wrap('abcd bc'), 'abcd\n  bc')
+    assert.equal(lw.wrap('abcd bc'), 'abcd\n  bc')
 
-    const lw3 = new LineWrap({
+    lw = new LineWrap({
       width: 10,
       indent: 2,
       indentFirst: false,
-      firstCol: 12,
+      firstCol: 8,
     })
-    assert.equal(lw3.wrap('boo'), 'boo')
+    assert.equal(lw.wrap('boo'), 'boo')
+
+    lw = new LineWrap({
+      width: 10,
+      indent: 5,
+      indentFirst: false,
+      firstCol: 0,
+    })
+    assert.equal(lw.wrap('boo'), 'boo')
+    assert.equal(lw.wrap('   '), '')
+    assert.equal(lw.wrap('012345678901234567890'), '012345678901234567890')
+
+    lw = new LineWrap({
+      width: 10,
+      indent: 5,
+      indentFirst: false,
+      firstCol: 0,
+      overflow: LineWrap.OVERFLOW_CLIP,
+    })
+    assert.equal(lw.wrap('012345678901234567890'), '012345678\u{2026}')
+
+    assert.throws(() => new LineWrap({
+      width: 10,
+      indentFirst: false,
+      firstCol: 10,
+    }))
+
+    assert.throws(() => new LineWrap({
+      width: 10,
+      indentFirst: false,
+      firstCol: 9,
+      overflow: LineWrap.OVERFLOW_CLIP,
+    }))
   })
 
   it('clips overflows', () => {
