@@ -65,4 +65,16 @@ describe('line wrapping', () => {
       new LineWrap({width: 4, indent: 4})
     })
   })
+
+  it('does verbose logging', () => {
+    /* eslint-disable no-console */
+    const old = console.log
+    const res = []
+    console.log = (...args) => res.push(args)
+    const lw = new LineWrap({width: 4, verbose: true})
+    assert.equal(lw.wrap('abcde'), 'abcde')
+    assert(res.length > 0)
+    console.log = old
+    /* eslint-enable no-console */
+  })
 })
