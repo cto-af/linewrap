@@ -8,6 +8,10 @@ Wrap lines using Unicode UAX #14 line breaking rules.
 npm install @cto.af/linewrap
 ```
 
+## CLI
+
+A command line interface is available: [@cto.af/linewrap-cli](https://github.com/cto-af/linewrap-cli)
+
 ## API
 
 ```js
