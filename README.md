@@ -57,6 +57,9 @@ The following options are all optional, having the specified defaults:
 <dd>String to use when long word is truncated with
 <code>LineWrap.OVERFLOW_CLIP</code>.</dd>
 
+<dt><code>example7: boolean = false</code></dt>
+<dd>Turn on the extra rules for matching numbers from Example 7 of UAX #14</dd>
+
 <dt><code>firstCol: number = NaN</code></dt>
 <dd>If indentFirst is false, how many columns was the first line already indented?
 If NaN, use the indent width, in graphemes.  If indentFirst is true, this is
@@ -81,6 +84,10 @@ beginning of each line.</dd>
 <dd>Indent the first line?  If not, treat the first line as if it was already
 indented, giving a short first line.  Use <code>firstCol</code> to control how
 short the first line should be.</dd>
+
+<dt><code>isCJK : boolean</code></dt>
+<dd>Override the locale, forcing strings to be measured in a
+Chinese/Japanese/Korean context or not.</dd>
 
 <dt><code>isNewline : RegExp | null = /[^\S\r\n\v\f\x85\u2028\u2029]*[\r\n\v\f\x85\u2028\u2029]+\s*/gu</code></dt>
 <dd>Regular expression that finds newlines for replacement with
@@ -119,6 +126,10 @@ three options:
     the end of each line.</li>
   </ul>
 </dd>
+
+<dt><code>verbose : boolean = false</code></dt>
+<dd>Enable output on stdout for deep diagnostic information.  Only useful for
+debugging.</dd>
 
 <dt><code>width: number = 80</code></dt>
 <dd>Maximum number of graphemes per line, <b>including</b> indentation.</dd>
