@@ -117,4 +117,10 @@ describe('line wrapping', () => {
     console.log = old
     /* eslint-enable no-console */
   })
+
+  it('handles locale options', () => {
+    const lw = new LineWrap({locale: 'ko', isCJK: false})
+    assert.equal(lw.locale, 'ko')
+    assert.equal(lw.isCJK, false)
+  })
 })
