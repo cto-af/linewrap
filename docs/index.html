@@ -15,6 +15,7 @@
 <div class="tsd-panel tsd-typography"><a id="md:ctoaflinewrap" class="tsd-anchor"></a><h1><a href="#md:ctoaflinewrap">@cto.af/linewrap</a></h1><p>Wrap lines using Unicode UAX #14 line breaking rules.</p>
 <a id="md:installation" class="tsd-anchor"></a><h2><a href="#md:installation">Installation</a></h2><pre><code class="language-sh"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-2">@cto.af/linewrap</span>
 </code><button>Copy</button></pre>
+<a id="md:cli" class="tsd-anchor"></a><h2><a href="#md:cli">CLI</a></h2><p>A command line interface is available: <a href="https://github.com/cto-af/linewrap-cli">@cto.af/linewrap-cli</a></p>
 <a id="md:api" class="tsd-anchor"></a><h2><a href="#md:api">API</a></h2><pre><code class="language-js"><span class="hl-3">import</span><span class="hl-1"> {</span><span class="hl-4">LineWrap</span><span class="hl-1">} </span><span class="hl-3">from</span><span class="hl-1"> </span><span class="hl-2">&#39;@cto.af/linewrap&#39;</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">w</span><span class="hl-1"> = </span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-0">LineWrap</span><span class="hl-1">()</span><br/><span class="hl-4">w</span><span class="hl-1">.</span><span class="hl-0">wrap</span><span class="hl-1">(</span><span class="hl-2">&#39;Lorem ipsum dolor sit amet...&#39;</span><span class="hl-1">)  </span><span class="hl-7">// A string, wrapped to your console length</span><br/><span class="hl-3">for</span><span class="hl-1"> (</span><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">line</span><span class="hl-1"> </span><span class="hl-5">of</span><span class="hl-1"> </span><span class="hl-4">w</span><span class="hl-1">.</span><span class="hl-0">lines</span><span class="hl-1">(</span><span class="hl-2">&#39;Lorem ipsum dolor sit amet...&#39;</span><span class="hl-1">)) {</span><br/><span class="hl-1">  </span><span class="hl-7">// `line` does not have a newline at the end</span><br/><span class="hl-1">}</span>
 </code><button>Copy</button></pre>
 <p>Full <a href="https://cto-af.github.io/linewrap/">API docs</a> are available.</p>
@@ -145,6 +146,7 @@ escapes will be replaced appropriately.  Defaults to an identity transform.</dd>
 <li>
 <ul>
 <li><a href="#md:installation"><span>Installation</span></a></li>
+<li><a href="#md:cli"><span>CLI</span></a></li>
 <li><a href="#md:api"><span>API</span></a></li>
 <li>
 <ul>
