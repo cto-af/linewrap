@@ -27,7 +27,7 @@
   "repository": "cto-af/linewrap",
   "license": "MIT",
   "devDependencies": {
-    "@cto.af/eslint-config": "2.0.3",
+    "@cto.af/eslint-config": "3.0.1",
     "@types/node": "20.4.2",
     "c8": "8.0.0",
     "eslint": "8.45.0",
@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@cto.af/linebreak": "1.1.2",
-    "@cto.af/string-width": "2.0.0"
+    "@cto.af/string-width": "2.0.1"
   },
   "overrides": {
     "semver": ">=7.5.4"
