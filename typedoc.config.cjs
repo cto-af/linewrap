@@ -17,4 +17,4 @@ module.exports = {
   },
   categorizeByGroup: false,
   sort: ['static-first', 'alphabetical'],
-}
+};
