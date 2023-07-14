@@ -23,6 +23,7 @@ module.exports = {
         varsIgnorePattern: '^_',
       },
     ],
+    'multiline-comment-style': 'off',
   },
   overrides: [
     {
