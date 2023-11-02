@@ -37,7 +37,7 @@
     "typescript": "5.2.2"
   },
   "dependencies": {
-    "@cto.af/linebreak": "1.2.1",
+    "@cto.af/linebreak": "1.2.2",
     "@cto.af/string-width": "2.1.0"
   },
   "engines": {
