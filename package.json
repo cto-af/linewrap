@@ -26,21 +26,22 @@
   "author": "Joe Hildebrand <joe-github@cursive.net>",
   "repository": "cto-af/linewrap",
   "license": "MIT",
-  "devDependencies": {
-    "@cto.af/eslint-config": "3.0.2",
-    "@types/node": "20.8.10",
-    "c8": "8.0.1",
-    "eslint": "8.52.0",
-    "mocha": "10.2.0",
-    "rimraf": "5.0.5",
-    "typedoc": "0.25.3",
-    "typescript": "5.2.2"
-  },
   "dependencies": {
-    "@cto.af/linebreak": "1.2.2",
-    "@cto.af/string-width": "2.1.0"
+    "@cto.af/linebreak": "2.0.0",
+    "@cto.af/string-width": "3.0.0"
   },
+  "devDependencies": {
+    "@cto.af/eslint-config": "3.1.0",
+    "@types/node": "20.11.25",
+    "c8": "9.1.0",
+    "eslint": "8.57.0",
+    "mocha": "10.3.0",
+    "rimraf": "5.0.5",
+    "typedoc": "0.25.11",
+    "typescript": "5.4.2"
+  },
+  "packageManager": "pnpm@8.15.4",
   "engines": {
-    "node": ">= 16"
+    "node": ">= 18"
   }
 }
