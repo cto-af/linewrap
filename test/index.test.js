@@ -96,18 +96,15 @@ describe('line wrapping', () => {
 
   it('errors on bad overflow', () => {
     assert.throws(() => {
-      // eslint-disable-next-line no-new
       new LineWrap({width: 4, overflow: Symbol('bad')});
     });
 
     assert.throws(() => {
-      // eslint-disable-next-line no-new
       new LineWrap({width: 4, indent: 4});
     });
   });
 
   it('does verbose logging', () => {
-    /* eslint-disable no-console */
     const old = console.log;
     const res = [];
     console.log = (...args) => res.push(args);
@@ -115,7 +112,6 @@ describe('line wrapping', () => {
     assert.equal(lw.wrap('abcde'), 'abcde');
     assert(res.length > 0);
     console.log = old;
-    /* eslint-enable no-console */
   });
 
   it('handles locale options', () => {
