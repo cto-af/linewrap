@@ -11,12 +11,7 @@ export default [
     ],
   },
   ...mod,
-  {
-    files: ["**/*.cjs"],
-    languageOptions: {
-      sourceType: "commonjs",
-    },
-  },
+  ...cjs,
   ...mocha,
   {
     files: [

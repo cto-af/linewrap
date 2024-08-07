@@ -10,6 +10,10 @@ describe('line wrapping', () => {
     assert.equal(lw.wrap('foo\tbar'), 'foo\tbar');
     assert.equal(lw.wrap('foo\nbar'), 'foo bar');
     assert.equal(lw.wrap('foo\u1680bar'), 'foo\u1680bar');
+    assert.equal(
+      lw.wrap('bar\x1B[32mfoo\x1B[39m\x1B[32mfoo\x1B[39mbaz'),
+      'bar\x1B[32mfoo\x1B[39m\x1B[32mfoo\x1B[39mbaz'
+    );
   });
 
   it('wraps', () => {
@@ -17,6 +21,10 @@ describe('line wrapping', () => {
     assert.equal(lw.wrap('foo    bar'), 'foo\nbar');
     assert.equal(lw.wrap('foo\u1680bar'), 'foo\nbar');
     assert.equal(lw.wrap('\u2014  \u2014'), '\u2014  \u2014');
+    assert.equal(
+      lw.wrap('bar \x1B[32mfoo\x1B[39m \x1B[32mfoo\x1B[0m baz'),
+      'bar\n\x1B[32mfoo\x1B[39m\n\x1B[32mfoo\x1B[0m\nbaz'
+    );
   });
 
   it('keeps newlines', () => {

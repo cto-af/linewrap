@@ -12,15 +12,15 @@ importers:
         specifier: 2.0.1
         version: 2.0.1
       '@cto.af/string-width':
-        specifier: 3.0.1
-        version: 3.0.1
+        specifier: 3.1.0
+        version: 3.1.0
     devDependencies:
       '@cto.af/eslint-config':
         specifier: 4.1.5
         version: 4.1.5(eslint@9.8.0)(typescript@5.5.4)
       '@types/node':
-        specifier: 22.0.2
-        version: 22.0.2
+        specifier: 22.1.0
+        version: 22.1.0
       c8:
         specifier: 10.1.2
         version: 10.1.2
@@ -60,8 +60,8 @@ packages:
     resolution: {integrity: sha512-cWEqw1cxTjC2Kie3r8zBHM+F/cAPubYF4gMjyugcwvL0bqXqMgM/23X848j9fD2G492dIk6rpLCkfnoBsmdP0w==}
     engines: {node: '>=18'}
 
-  '@cto.af/string-width@3.0.1':
-    resolution: {integrity: sha512-cTn2blige6PE+gLmVBjO6ZN/7TltGyzeI0FeH/rxFcfBL8eLAvC4rhzioC5pPb1hYKfbweTWLre/UQKbS+W5Mg==}
+  '@cto.af/string-width@3.1.0':
+    resolution: {integrity: sha512-WlU1QkRE7YtuXq1WNW1pkz5LHGTn7mFFEk7m/RWnK6kkioUmou6w29EljetPlpbj+KtVEbid/pvLrv8MO0hpEw==}
     engines: {node: '>= 18'}
 
   '@cto.af/unicode-trie@2.0.1':
@@ -187,8 +187,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@22.0.2':
-    resolution: {integrity: sha512-yPL6DyFwY5PiMVEwymNeqUTKsDczQBJ/5T7W/46RwLU/VH+AA8aT5TZkvBviLKLbbm0hlfftEkGrNzfRk/fofQ==}
+  '@types/node@22.1.0':
+    resolution: {integrity: sha512-AOmuRF0R2/5j1knA3c6G3HOk523Ga+l+ZXltX8SF1+5oqcXijjfTd8fY3XRZqSihEu9XhtQnKYLmkFaoxgsJHw==}
 
   '@types/unist@3.0.2':
     resolution: {integrity: sha512-dqId9J8K/vGi5Zr7oo212BGii5m3q5Hxlkwy3WpYuKPklmBEvsbMYYyLxAQpSffdLl/gdW0XUpKWFvYmyoWCoQ==}
@@ -957,8 +957,8 @@ packages:
   uc.micro@2.1.0:
     resolution: {integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==}
 
-  undici-types@6.11.1:
-    resolution: {integrity: sha512-mIDEX2ek50x0OlRgxryxsenE5XaQD4on5U2inY7RApK3SOJpofyw7uW2AyfMKkhAxXIceo2DeWGVGwyvng1GNQ==}
+  undici-types@6.13.0:
+    resolution: {integrity: sha512-xtFJHudx8S2DSoujjMd1WeWvn7KKWFRESZTMeL1RptAYERu29D6jphMjjY+vn96jvN3kVPDNxU/E13VTaXj6jg==}
 
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
@@ -1042,9 +1042,10 @@ snapshots:
     dependencies:
       '@cto.af/unicode-trie': 2.0.1
 
-  '@cto.af/string-width@3.0.1':
+  '@cto.af/string-width@3.1.0':
     dependencies:
       '@cto.af/unicode-trie': 2.0.1
+      ansi-regex: 6.0.1
       emoji-regex: 10.3.0
 
   '@cto.af/unicode-trie@2.0.1':
@@ -1191,9 +1192,9 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@22.0.2':
+  '@types/node@22.1.0':
     dependencies:
-      undici-types: 6.11.1
+      undici-types: 6.13.0
 
   '@types/unist@3.0.2': {}
 
@@ -1962,7 +1963,7 @@ snapshots:
 
   uc.micro@2.1.0: {}
 
-  undici-types@6.11.1: {}
+  undici-types@6.13.0: {}
 
   uri-js@4.4.1:
     dependencies:
