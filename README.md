@@ -74,6 +74,9 @@ ignored.</dd>
 that string.  If a number, insert that many <code>indentChar</code>s at the
 beginning of each line.</dd>
 
+<dt><code>includeANSI: boolean = false</code></dt>
+<dd>If true, include ANSI escape sequences in the width of the string.  If false, strips ANSI before calculating width.</dd>
+
 <dt><code>indentChar: string = ' '</code> (U+0020: SPACE)</dt>
 <dd>If <code>indent</code> is a number, use that many of this string to indent.</dd>
 
