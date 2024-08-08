@@ -1,6 +1,6 @@
 {
   "name": "@cto.af/linewrap",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Wrap lines using the Unicode Line Breaking algorithm from UAX #14",
   "main": "lib/index.js",
   "type": "module",
