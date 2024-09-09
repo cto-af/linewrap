@@ -1,6 +1,7 @@
 .vscode/
 coverage/
+docs/
 node_modules/
-tools/*.txt
 t.js
+tools/*.txt
 types/
