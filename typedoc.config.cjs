@@ -6,6 +6,7 @@ module.exports = {
   ],
   out: 'docs',
   cleanOutputDir: true,
+  includeVersion: true,
   sidebarLinks: {
     GitHub: 'https://github.com/cto-af/linewrap',
     Documentation: 'http://cto-af.github.io/linewrap/',
