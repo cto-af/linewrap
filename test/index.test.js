@@ -1,5 +1,6 @@
 import {LineWrap} from '../lib/index.js';
 import assert from 'assert/strict';
+import { describe, it } from 'node:test';
 
 describe('line wrapping', () => {
   it('handles plain strings', () => {
