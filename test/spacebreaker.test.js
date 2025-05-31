@@ -1,3 +1,4 @@
+import { describe, it } from 'node:test';
 import {LineBreak} from '@cto.af/linebreak';
 import {SpaceBreaker} from '../lib/spacebreaker.js';
 import assert from 'assert/strict';

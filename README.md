@@ -57,9 +57,6 @@ The following options are all optional, having the specified defaults:
 <dd>String to use when long word is truncated with
 <code>LineWrap.OVERFLOW_CLIP</code>.</dd>
 
-<dt><code>example7: boolean = false</code></dt>
-<dd>Turn on the extra rules for matching numbers from Example 7 of UAX #14</dd>
-
 <dt><code>firstCol: number = NaN</code></dt>
 <dd>If indentFirst is false, how many columns was the first line already indented?
 If NaN, use the indent width, in graphemes.  If indentFirst is true, this is
