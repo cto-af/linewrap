@@ -1,6 +1,6 @@
+import { describe, it } from 'node:test';
 import {LineWrap} from '../lib/index.js';
 import assert from 'assert/strict';
-import { describe, it } from 'node:test';
 
 describe('line wrapping', () => {
   it('handles plain strings', () => {
@@ -137,4 +137,13 @@ describe('line wrapping', () => {
       'bar-\n\x1B[3-\n2mf-\noo\x1B-\n[39-\nm\x1B[-\n32m-\nfoo-\n\x1B[3-\n9mb-\naz'
     );
   });
+
+  it('unwraps', () => {
+    const lw = new LineWrap();
+    assert.equal(lw.unwrap('foo\nbar'), 'foo bar');
+    assert.equal(lw.unwrap('foo\r\nbar'), 'foo bar');
+
+    const lw2 = new LineWrap({isNewline: null});
+    assert.equal(lw2.unwrap('foo\r\nbar'), 'foo\r\nbar');
+  })
 });
