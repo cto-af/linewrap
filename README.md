@@ -33,6 +33,9 @@ Full [API docs](https://cto-af.github.io/linewrap/) are available.
 between the lines.  Use <code>wrap()</code> for this.  Note that there is no
 newline at the end of the wrapped text.</dd>
 
+<dt>unwrap(string)</dt>
+<dd>Undo wrapping using the same options from wrap().</dd>
+
 <dt>*lines(string)</dt>
 
 <dd>Sometimes, you'll want the lines individually; perhaps you're streaming, or
