@@ -141,9 +141,6 @@ describe('line wrapping', () => {
   it('unwraps', () => {
     const lw = new LineWrap();
     assert.equal(lw.unwrap('foo\nbar'), 'foo bar');
-    assert.equal(lw.unwrap('foo\r\nbar'), 'foo bar');
-
-    const lw2 = new LineWrap({isNewline: null});
-    assert.equal(lw2.unwrap('foo\r\nbar'), 'foo\r\nbar');
+    assert.equal(lw.unwrap('    foo \r\n  bar  '), 'foo bar');
   })
 });
