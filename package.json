@@ -5,6 +5,10 @@
   "main": "lib/index.js",
   "type": "module",
   "types": "types/index.d.ts",
+  "files": [
+    "lib/*",
+    "types/*"
+  ],
   "scripts": {
     "clean": "rimraf docs types",
     "test": "c8 node --test test/*.test.js",
