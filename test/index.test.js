@@ -1,9 +1,9 @@
-import {it, test} from 'node:test';
 import {LineWrap} from '../lib/index.js';
 import assert from 'node:assert/strict';
+import {test} from 'node:test';
 
-test('line wrapping', () => {
-  it('handles plain strings', () => {
+test('line wrapping', async() => {
+  await test('handles plain strings', () => {
     const lw = new LineWrap();
     assert.equal(lw.wrap(''), '');
     assert.equal(lw.wrap('foo'), 'foo');
@@ -17,7 +17,7 @@ test('line wrapping', () => {
     );
   });
 
-  it('wraps', () => {
+  await test('wraps', () => {
     const lw = new LineWrap({width: 4});
     assert.equal(lw.wrap('foo    bar'), 'foo\nbar');
     assert.equal(lw.wrap('foo\u1680bar'), 'foo\nbar');
@@ -28,19 +28,19 @@ test('line wrapping', () => {
     );
   });
 
-  it('keeps newlines', () => {
+  await test('keeps newlines', () => {
     const lw = new LineWrap({isNewline: null});
     assert.equal(lw.wrap('foo\nbar'), 'foo\nbar');
   });
 
-  it('does not split URLs', () => {
+  await test('does not split URLs', () => {
     const lw = new LineWrap({width: 4});
     assert.equal(lw.wrap('https://example.com'), 'https://example.com');
     assert.equal(lw.wrap('http://a.0/'), 'http://\na.0/'); // Invalid URL
     assert.equal(lw.wrap('a https://example.com'), 'a\nhttps://example.com');
   });
 
-  it('indents', () => {
+  await test('indents', () => {
     let lw = new LineWrap({width: 4, indent: 2});
     assert.equal(lw.wrap('ab bc'), '  ab\n  bc');
 
@@ -93,18 +93,18 @@ test('line wrapping', () => {
     }));
   });
 
-  it('clips overflows', () => {
+  await test('clips overflows', () => {
     const lw = new LineWrap({width: 4, overflow: LineWrap.OVERFLOW_CLIP});
     assert.equal(lw.wrap('abcde'), 'abc…');
   });
 
-  it('dashes overflows', () => {
+  await test('dashes overflows', () => {
     const lw = new LineWrap({width: 4, overflow: LineWrap.OVERFLOW_ANYWHERE});
     assert.equal(lw.wrap('abcde'), 'abc-\nde');
     assert.equal(lw.wrap('\x1B[32mab\x1B[0mcde'), '\x1B[32mab\x1B[0mc-\nde');
   });
 
-  it('errors on bad overflow', () => {
+  await test('errors on bad overflow', () => {
     assert.throws(() => {
       // eslint-disable-next-line no-new
       new LineWrap({width: 4, overflow: Symbol('bad')});
@@ -116,7 +116,7 @@ test('line wrapping', () => {
     });
   });
 
-  it('does verbose logging', () => {
+  await test('does verbose logging', () => {
     // eslint-disable-next-line no-console
     const old = console.log;
     const res = [];
@@ -129,13 +129,13 @@ test('line wrapping', () => {
     console.log = old;
   });
 
-  it('handles locale options', () => {
+  await test('handles locale options', () => {
     const lw = new LineWrap({locale: 'ko', isCJK: false});
     assert.equal(lw.locale, 'ko');
     assert.equal(lw.isCJK, false);
   });
 
-  it('handles includeANSI option', () => {
+  await test('handles includeANSI option', () => {
     const lw = new LineWrap({
       width: 4,
       includeANSI: true,
@@ -147,13 +147,13 @@ test('line wrapping', () => {
     );
   });
 
-  it('unwraps', () => {
+  await test('unwraps', () => {
     const lw = new LineWrap();
     assert.equal(lw.unwrap('foo\nbar'), 'foo bar');
     assert.equal(lw.unwrap('    foo \r\n  bar  '), 'foo bar');
   });
 
-  it('yields parts', () => {
+  await test('yields parts', () => {
     const lw = new LineWrap();
     const parts = [...lw.parts('boo', 12)];
     assert.deepEqual(parts, [
