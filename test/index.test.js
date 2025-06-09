@@ -1,8 +1,8 @@
-import { describe, it } from 'node:test';
+import {it, test} from 'node:test';
 import {LineWrap} from '../lib/index.js';
-import assert from 'assert/strict';
+import assert from 'node:assert/strict';
 
-describe('line wrapping', () => {
+test('line wrapping', () => {
   it('handles plain strings', () => {
     const lw = new LineWrap();
     assert.equal(lw.wrap(''), '');
@@ -106,21 +106,26 @@ describe('line wrapping', () => {
 
   it('errors on bad overflow', () => {
     assert.throws(() => {
+      // eslint-disable-next-line no-new
       new LineWrap({width: 4, overflow: Symbol('bad')});
     });
 
     assert.throws(() => {
+      // eslint-disable-next-line no-new
       new LineWrap({width: 4, indent: 4});
     });
   });
 
   it('does verbose logging', () => {
+    // eslint-disable-next-line no-console
     const old = console.log;
     const res = [];
+    // eslint-disable-next-line no-console
     console.log = (...args) => res.push(args);
     const lw = new LineWrap({width: 4, verbose: true});
     assert.equal(lw.wrap('abcde'), 'abcde');
     assert(res.length > 0);
+    // eslint-disable-next-line no-console
     console.log = old;
   });
 
@@ -131,7 +136,11 @@ describe('line wrapping', () => {
   });
 
   it('handles includeANSI option', () => {
-    const lw = new LineWrap({width: 4, includeANSI: true, overflow: LineWrap.OVERFLOW_ANYWHERE});
+    const lw = new LineWrap({
+      width: 4,
+      includeANSI: true,
+      overflow: LineWrap.OVERFLOW_ANYWHERE,
+    });
     assert.equal(
       lw.wrap('bar\x1B[32mfoo\x1B[39m\x1B[32mfoo\x1B[39mbaz'),
       'bar-\n\x1B[3-\n2mf-\noo\x1B-\n[39-\nm\x1B[-\n32m-\nfoo-\n\x1B[3-\n9mb-\naz'
@@ -142,5 +151,17 @@ describe('line wrapping', () => {
     const lw = new LineWrap();
     assert.equal(lw.unwrap('foo\nbar'), 'foo bar');
     assert.equal(lw.unwrap('    foo \r\n  bar  '), 'foo bar');
-  })
+  });
+
+  it('yields parts', () => {
+    const lw = new LineWrap();
+    const parts = [...lw.parts('boo', 12)];
+    assert.deepEqual(parts, [
+      {
+        str: 'boo',
+        length: 15,
+        last: true,
+      },
+    ]);
+  });
 });
