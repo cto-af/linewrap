@@ -150,6 +150,7 @@ test('line wrapping', async() => {
   await test('unwraps', () => {
     const lw = new LineWrap();
     assert.equal(lw.unwrap('foo\nbar'), 'foo bar');
+    assert.equal(lw.unwrap('foo\x85bar'), 'foo bar');
     assert.equal(lw.unwrap('    foo \r\n  bar  '), 'foo bar');
   });
 
