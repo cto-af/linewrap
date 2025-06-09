@@ -1,7 +1,7 @@
-import { describe, it } from 'node:test';
+import {it, test} from 'node:test';
 import {LineBreak} from '@cto.af/linebreak';
 import {SpaceBreaker} from '../lib/spacebreaker.js';
-import assert from 'assert/strict';
+import assert from 'node:assert/strict';
 
 function points(str) {
   return [...str].map(c => {
@@ -22,7 +22,7 @@ function assertBreaks(str, expected, opts) {
   );
 }
 
-describe('special space breaking', () => {
+test('special space breaking', () => {
   it('marks runs of spaces with extra info', () => {
     assertBreaks(' 1', [[1, true], [2, false]]);
     assertBreaks(' a', [[1, true], [2, false]]);
