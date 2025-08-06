@@ -2,7 +2,7 @@ import {LineWrap} from '../lib/index.js';
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
 
-test('line wrapping', async() => {
+test('line wrapping', async () => {
   await test('handles plain strings', () => {
     const lw = new LineWrap();
     assert.equal(lw.wrap(''), '');
