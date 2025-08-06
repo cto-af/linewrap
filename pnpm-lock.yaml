@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@cto.af/linebreak':
-        specifier: 3.0.3
-        version: 3.0.3
+        specifier: 3.0.5
+        version: 3.0.5
       '@cto.af/string-width':
         specifier: 4.0.4
         version: 4.0.4
@@ -50,8 +50,8 @@ packages:
     resolution: {integrity: sha512-LeZFVjQTtAcBEd2LO9tBzlq3XIoB8GnmYlNwSPdiErYk0jQkdprRE3UmHkqbWaJSg6FNimx3P1z7WhJl0jxo8w==}
     engines: {node: '>=20'}
 
-  '@cto.af/linebreak@3.0.3':
-    resolution: {integrity: sha512-EIEHKzGxBPnHWlG2Gn05QQYGsTqIv6JajrixXw1TVkK5P3u7zuxUAvk0Ey1sZjYl6MnEbQJXJQWgNWwk6H9WNw==}
+  '@cto.af/linebreak@3.0.5':
+    resolution: {integrity: sha512-9q1DpxBLYiNmDrrd97/ykIb7QWEPx+CDCY2wLFM1c+HA4CjF60tMiaEkxE+OPn6PKp6YqrqbmilA7dGRUori1w==}
     engines: {node: '>=20'}
 
   '@cto.af/string-width@4.0.4':
@@ -814,7 +814,7 @@ snapshots:
       - eslint
       - typescript
 
-  '@cto.af/linebreak@3.0.3':
+  '@cto.af/linebreak@3.0.5':
     dependencies:
       '@cto.af/unicode-trie-runtime': 3.2.6
 

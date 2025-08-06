@@ -34,7 +34,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@cto.af/linebreak": "3.0.3",
+    "@cto.af/linebreak": "3.0.5",
     "@cto.af/string-width": "4.0.4"
   },
   "devDependencies": {
