@@ -38,16 +38,16 @@
     "@cto.af/string-width": "5.0.1"
   },
   "devDependencies": {
-    "@cto.af/eslint-config": "6.2.5",
-    "@types/node": "25.3.3",
-    "eslint": "10.0.2",
-    "eslint-plugin-mocha": "11.2.0",
-    "rimraf": "6.1.3",
-    "superc8": "^12.2.4",
-    "typedoc": "0.28.17",
-    "typescript": "5.9.3"
+    "@cto.af/eslint-config": "^6.2.5",
+    "@types/node": "^25.5.0",
+    "eslint": "^10.1.0",
+    "eslint-plugin-mocha": "^11.2.0",
+    "rimraf": "^6.1.3",
+    "superc8": "^12.3.1",
+    "typedoc": "^0.28.17",
+    "typescript": "^5.9.3"
   },
-  "packageManager": "pnpm@10.30.3",
+  "packageManager": "pnpm@10.32.1",
   "engines": {
     "node": ">=20.13"
   }
