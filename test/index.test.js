@@ -131,7 +131,7 @@ test('line wrapping', async () => {
 
   await test('handles locale options', () => {
     const lw = new LineWrap({locale: 'ko', isCJK: false});
-    assert.equal(lw.locale, 'ko');
+    assert.equal(lw.locale.baseName, 'ko-Kore-KR');
     assert.equal(lw.isCJK, false);
   });
 
